@@ -7,13 +7,20 @@ import {
 } from "./store/reducers/resumeDataSlice";
 
 function App() {
-  const count = useSelector((state) => state.resumeData.test);
+  const count = useSelector((state: any) => state.resumeData.test);
   const dispatch = useDispatch();
+  const handleClick = (add: boolean) => {
+    if (add) {
+      dispatch(addToChecklist());
+    } else {
+      dispatch(removeFromChecklist());
+    }
+  };
   return (
     <div className="App">
-      {count}
-      <button onClick={dispatch(addToChecklist())}>Add</button>
-      <button onClick={dispatch(addToChecklist())}>Subtract</button>
+      {/* {count}
+      <button onClick={() => handleClick(true)}>Add</button>
+      <button onClick={() => handleClick(false)}>Subtract</button> */}
     </div>
   );
 }
