@@ -7,6 +7,7 @@ export default function Root() {
       <div id="sidebar">
         <div id="nameAndLinks">
           <h1>Rittick Datta</h1>
+          <h2>Senior Frontend React Developer</h2>
         </div>
         <nav>
           <ul>

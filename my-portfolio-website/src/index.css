@@ -232,8 +232,9 @@ i {
   height: 4em;
   width: 100%;
   margin-bottom: 1em;
+  font-size: 16px;
+  letter-spacing: 4px;
 
-  font-size: 1em;
   font-weight: 500;
 
   display: flex;
@@ -251,17 +252,18 @@ i {
   border-left: 2px solid #808080;
   border-top: 2px solid #808080;
   border-bottom: 2px solid #808080;
+  box-shadow: -2px 2px 10px #114084;
 }
 
 #sidebar nav a:hover {
-  font-size: 16px;
+  font-size: 1em;
+  letter-spacing: 2px;
   background: black;
   color: white;
   transition-duration: 300ms;
   transition-delay: 100ms;
-  letter-spacing: 4px;
+
   border: 5px solid #82b7dc;
-  box-shadow: -2px 2px 10px #114084;
 }
 
 #sidebar nav a.active {
@@ -422,10 +424,12 @@ i {
 #nameAndLinks {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: black;
   border-top-right-radius: 18px;
+  border-right: 5px solid #82b7dc;
 }
 
 #nameAndLinks > h1 {
@@ -433,12 +437,14 @@ i {
   font-size: 26px;
   font-weight: bold;
   color: Black;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: white;
+  height: 20px;
 }
 
-#nameAndLinks > h1:hover {
-  font-size: 30px;
-  font-weight: 600;
-  transition-duration: 200ms;
+#nameAndLinks > h2 {
+  font-size: 18px;
+  color: white;
+  font-weight: 200;
+  height: 15px;
 }
