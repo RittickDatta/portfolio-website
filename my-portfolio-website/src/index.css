@@ -35,7 +35,9 @@ button {
   border: none;
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
-  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  box-shadow:
+    0 0px 1px hsla(0, 0%, 0%, 0.2),
+    0 1px 2px hsla(0, 0%, 0%, 0.2);
   background-color: white;
   line-height: 1.5;
   margin: 0;
@@ -48,7 +50,9 @@ button {
 textarea:hover,
 input:hover,
 button:hover {
-  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  box-shadow:
+    0 0px 1px hsla(0, 0%, 0%, 0.6),
+    0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 button:active {
@@ -104,15 +108,17 @@ form[action$="destroy"] button {
 
 #sidebar {
   width: 22rem;
+  height: "100%";
   background-color: #f7f7f7;
   border-right: solid 1px #e3e3e3;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 #sidebar > * {
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 0rem;
 }
 
 #sidebar h1 {
@@ -122,7 +128,7 @@ form[action$="destroy"] button {
   align-items: center;
   margin: 0;
   padding: 1rem 2rem;
-  border-top: 1px solid #e3e3e3;
+  /* border-top: 1px solid #e3e3e3; */
   order: 1;
   line-height: 1;
 }
@@ -183,6 +189,10 @@ form[action$="destroy"] button {
   flex: 1;
   overflow: auto;
   padding-top: 1rem;
+  /* background-color: #343d46; */
+  width: 100%;
+  border-right: 5px solid #82b7dc;
+  border-bottom-right-radius: 16px;
 }
 
 #sidebar nav a span {
@@ -197,7 +207,7 @@ i {
   color: #818181;
 }
 #sidebar nav .active i {
-  color: inherit;
+  /* color: inherit; */
 }
 
 #sidebar ul {
@@ -207,25 +217,51 @@ i {
 }
 
 #sidebar li {
-  margin: 0.25rem 0;
+  height: 4em;
+  margin: 0.75rem 0;
+  color: white;
+  background-color: #82b7dc;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #sidebar nav a {
+  height: 4em;
+  width: 100%;
+  margin-bottom: 1em;
+
+  font-size: 1em;
+  font-weight: 500;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden;
 
   white-space: pre;
   padding: 0.5rem;
-  border-radius: 8px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
   color: inherit;
   text-decoration: none;
   gap: 1rem;
+  border-left: 2px solid #808080;
+  border-top: 2px solid #808080;
+  border-bottom: 2px solid #808080;
 }
 
 #sidebar nav a:hover {
-  background: #e3e3e3;
+  font-size: 16px;
+  background: black;
+  color: white;
+  transition-duration: 300ms;
+  transition-delay: 100ms;
+  letter-spacing: 4px;
+  border: 5px solid #82b7dc;
+  box-shadow: -2px 2px 10px #114084;
 }
 
 #sidebar nav a.active {
@@ -241,6 +277,9 @@ i {
   flex: 1;
   padding: 2rem 4rem;
   width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: scroll;
 }
 
 #detail.loading {
@@ -378,4 +417,28 @@ i {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+#nameAndLinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  border-top-right-radius: 18px;
+}
+
+#nameAndLinks > h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  color: Black;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#nameAndLinks > h1:hover {
+  font-size: 30px;
+  font-weight: 600;
+  transition-duration: 200ms;
 }

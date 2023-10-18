@@ -5,7 +5,9 @@ export default function Root() {
   return (
     <>
       <div id="sidebar">
-        <h1>Rittick Datta</h1>
+        <div id="nameAndLinks">
+          <h1>Rittick Datta</h1>
+        </div>
         <nav>
           <ul>
             <li>
