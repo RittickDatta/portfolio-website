@@ -1,25 +1,25 @@
-enum proficiency {
-  beginner,
-  intermediate,
-  advanced,
+export enum proficiency {
+  beginner = "Beginner",
+  intermediate = "Intermediate",
+  advanced = "Advanced",
 }
 
-enum skillCategory {
-  frontend,
-  backend,
-  database,
-  testing,
-  collaboration,
-  graphicDesign,
-  deploymentAndHosting,
+export enum skillCategory {
+  frontend = "Frontend",
+  backend = "Backend",
+  database = "Database",
+  testing = "Testing",
+  collaboration = "Collaboration",
+  graphicDesign = "Graphic Design",
+  deploymentAndHosting = "Deployment And Hosting",
 }
 
-enum numberOfYears {
-  underOne,
-  betweenOneAndThree,
-  moreThanThree,
-  five,
-  moreThanFive,
+export enum numberOfYears {
+  underOne = "< 1 Year",
+  betweenOneAndThree = "1 - 3 Years",
+  moreThanThree = "> 3 Years",
+  five = "5 Years",
+  moreThanFive = "> 5 Years",
 }
 
 const data = {
