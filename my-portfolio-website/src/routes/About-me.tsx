@@ -95,6 +95,17 @@ function getSkillPills() {
   ));
 }
 
+const handleScrollTo = () => {
+  const element = document.getElementById("skill-pill-section");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+setTimeout(() => {
+  handleScrollTo();
+}, 6000);
+
 export default function AboutMe() {
   const { aboutMe } = data;
   return (
@@ -113,6 +124,7 @@ export default function AboutMe() {
             fontSize: "2rem",
           }}
           elevation={6}
+          className="firstQuestion"
         >
           Are you looking for a senior frontend developer?
         </Paper>
@@ -124,23 +136,26 @@ export default function AboutMe() {
             color: "white",
           }}
           elevation={3}
+          className="secondQuestion"
         >
-          With Experience in React? And TypeScript?
+          With Experience in React? And TypeScript? And More...
         </Paper>
         <Box>
           <Paper
             sx={{
-              marginTop: "1rem",
+              marginTop: "1.5rem",
               padding: "1rem 2rem",
               display: "flex",
               justifyContent: "space-around",
+              fontSize: "1.5rem",
             }}
             elevation={0.5}
+            className="searchEnds"
           >
-            YOUR SEARCH ENDS HERE...
+            YOUR SEARCH ENDS HERE.
           </Paper>
         </Box>
-        <Box sx={{}}>
+        <Box sx={{}} id="skill-pill-section">
           <Paper
             sx={{
               display: "flex",

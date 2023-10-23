@@ -7,17 +7,37 @@
 }
 
 .skillPill {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.firstQuestion {
+  animation: fadeInAnimation ease-in-out 3s;
+  animation-delay: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.secondQuestion {
+  animation: fadeInAnimation ease-in-out 5s;
+  animation-delay: 900ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.searchEnds {
+  animation: fadeInAnimation ease-in-out 10s;
+  animation-delay: 2200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-    
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
