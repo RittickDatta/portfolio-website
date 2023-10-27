@@ -109,6 +109,7 @@ form[action$="destroy"] button {
 #sidebar {
   width: 22rem;
   height: "100%";
+  width: "300px";
   background-color: #f7f7f7;
   border-right: solid 1px #e3e3e3;
   display: flex;
@@ -288,6 +289,12 @@ i {
   opacity: 0.25;
   transition: opacity 200ms;
   transition-delay: 200ms;
+}
+
+@media (max-width: 700px) {
+  #sidebar {
+    left: -300px;
+  }
 }
 
 #contact {

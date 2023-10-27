@@ -29,7 +29,7 @@ function getBoxSize(experienceWithSkill: string) {
   }
 }
 
-function SkillPill(props: SkillPillProps) {
+export function SkillPill(props: SkillPillProps) {
   const {
     name,
     proficiency,
@@ -65,7 +65,7 @@ function SkillPill(props: SkillPillProps) {
                 sx={{
                   color: "white",
                   backgroundColor: "black",
-                  p: "15px 20px",
+                  p: "20px",
                   borderRadius: "10px",
                   ...getBoxSize(numberOfYears),
                 }}
@@ -80,9 +80,11 @@ function SkillPill(props: SkillPillProps) {
   );
 }
 
-function getSkillPills() {
+export function getSkillPills(allSkills = false) {
   const { skills } = data;
-  const recentSkills = skills.filter((item) => item.skillUsedInRecentRole);
+  const recentSkills = !allSkills
+    ? skills.filter((item) => item.skillUsedInRecentRole)
+    : skills;
   return recentSkills.map((item, index) => (
     <SkillPill
       key={index}

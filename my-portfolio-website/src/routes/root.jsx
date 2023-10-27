@@ -23,9 +23,9 @@ export default function Root() {
             <li>
               <Link to={`/skills`}>Skills</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to={`more-info`}>More Info</Link>
-            </li>
+            </li> */}
             <li>
               <Link to={`/contact`}>Contact</Link>
             </li>
